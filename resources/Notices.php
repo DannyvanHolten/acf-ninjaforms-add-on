@@ -1,6 +1,6 @@
 <?php
 
-namespace ACFGravityformsField;
+namespace ACFNinjaformsField;
 
 use GFAPI;
 
@@ -36,7 +36,7 @@ class Notices
     {
         if (!class_exists('GFAPI')) {
             $notice = sprintf(__('Warning: You need to <a href="%s">Activate Gravityforms</a> in order to use the Advanced Custom Fields: Gravityforms Add-on.',
-                ACF_GF_FIELD_TEXTDOMAIN), admin_url('plugins.php'));
+                ACF_NF_FIELD_TEXTDOMAIN), admin_url('plugins.php'));
 
             $this->createNotice($notice, $inline, $alt);
         }
@@ -46,7 +46,7 @@ class Notices
     {
         if (!$this->forms) {
             $notice = sprintf(__(' Warning: There are no active forms. You need to <a href="%s">Create a New Form</a> in order to use the Advanced Custom Fields: Gravityforms Add-on.',
-                ACF_GF_FIELD_TEXTDOMAIN), admin_url('admin.php?page=gf_new_form'));
+                ACF_NF_FIELD_TEXTDOMAIN), admin_url('admin.php?page=gf_new_form'));
 
             $this->createNotice($notice, $inline, $alt);
         }
@@ -59,7 +59,7 @@ class Notices
     {
         if (!function_exists('get_field')) {
             $notice = sprintf(__('Warning: You need to <a href="%s">Activate Advanced Custom Fields</a> in order to use the Advanced Custom Fields: Gravityforms Add-on.',
-                ACF_GF_FIELD_TEXTDOMAIN), admin_url('plugins.php'));
+                ACF_NF_FIELD_TEXTDOMAIN), admin_url('plugins.php'));
 
             $this->createNotice($notice, $inline, $alt);
         }

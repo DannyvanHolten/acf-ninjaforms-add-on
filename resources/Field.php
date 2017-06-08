@@ -1,6 +1,6 @@
 <?php
 
-namespace ACFGravityformsField;
+namespace ACFNinjaformsField;
 
 use acf_field;
 use GFAPI;
@@ -58,8 +58,8 @@ class Field extends acf_field
             'name'         => 'return_format',
             'layout'       => 'horizontal',
             'choices'      => [
-                'post_object' => __('Form Object', ACF_GF_FIELD_TEXTDOMAIN),
-                'id'          => __('Form ID', ACF_GF_FIELD_TEXTDOMAIN)
+                'post_object' => __('Form Object', ACF_NF_FIELD_TEXTDOMAIN),
+                'id'          => __('Form ID', ACF_NF_FIELD_TEXTDOMAIN)
             ],
         ]);
 
@@ -127,7 +127,7 @@ class Field extends acf_field
 
         // Check if we're allowing an empty form. If so, create a default option
         if ($field['allow_null']) {
-            $fieldOptions .= '<option value="">' . __('- Select a form -', ACF_GF_FIELD_TEXTDOMAIN) . '</option>';
+            $fieldOptions .= '<option value="">' . __('- Select a form -', ACF_NF_FIELD_TEXTDOMAIN) . '</option>';
         }
 
         // Loop trough all our choices

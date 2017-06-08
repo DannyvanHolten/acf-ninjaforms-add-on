@@ -1,6 +1,6 @@
 <?php
 
-namespace ACFGravityformsField;
+namespace ACFNinjaformsField;
 
 use acf_field;
 use GFAPI;
@@ -83,8 +83,8 @@ class FieldForV4 extends acf_field
                     'name'    => 'fields[' . $key . '][return_format]',
                     'value'   => $field['return_format'],
                     'choices' => [
-                        'post_object' => __('Form Object', ACF_GF_FIELD_TEXTDOMAIN),
-                        'id' => __('Form ID', ACF_GF_FIELD_TEXTDOMAIN)
+                        'post_object' => __('Form Object', ACF_NF_FIELD_TEXTDOMAIN),
+                        'id' => __('Form ID', ACF_NF_FIELD_TEXTDOMAIN)
                     ],
                     'layout'  => 'horizontal',
                 ]); ?>

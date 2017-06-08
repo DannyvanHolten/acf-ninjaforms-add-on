@@ -1,6 +1,6 @@
 <?php
 
-namespace ACFGravityformsField;
+namespace ACFNinjaformsField;
 
 class Init
 {
@@ -51,6 +51,6 @@ class Init
      */
     public function loadTextDomain()
     {
-        load_plugin_textdomain(ACF_GF_FIELD_TEXTDOMAIN, false, ACF_GF_FIELD_LANGUAGES);
+        load_plugin_textdomain(ACF_NF_FIELD_TEXTDOMAIN, false, ACF_NF_FIELD_LANGUAGES);
     }
 }
