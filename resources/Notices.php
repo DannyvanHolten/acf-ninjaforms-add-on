@@ -25,27 +25,27 @@ class Notices
      */
     public function addHooks()
     {
-        add_action('admin_notices', [$this, 'isGravityFormsActive']);
+        add_action('admin_notices', [$this, 'isNinjaFormsActive']);
         add_action('admin_notices', [$this, 'isAdvancedCustomFieldsActive']);
     }
 
     /**
-     * Check if gravityforms is active. If not, issue a notice
+     * Check if ninjaforms is active. If not, issue a notice
      */
-    public function isGravityFormsActive($inline = '', $alt = '')
+    public function isNinjaFormsActive($inline = '', $alt = '')
     {
         if (!class_exists('GFAPI')) {
-            $notice = sprintf(__('Warning: You need to <a href="%s">Activate Gravityforms</a> in order to use the Advanced Custom Fields: Gravityforms Add-on.',
+            $notice = sprintf(__('Warning: You need to <a href="%s">Activate Ninjaforms</a> in order to use the Advanced Custom Fields: Ninjaforms Add-on.',
                 ACF_NF_FIELD_TEXTDOMAIN), admin_url('plugins.php'));
 
             $this->createNotice($notice, $inline, $alt);
         }
     }
 
-    public function hasActiveGravityForms($inline = '', $alt = '')
+    public function hasActiveNinjaForms($inline = '', $alt = '')
     {
         if (!$this->forms) {
-            $notice = sprintf(__(' Warning: There are no active forms. You need to <a href="%s">Create a New Form</a> in order to use the Advanced Custom Fields: Gravityforms Add-on.',
+            $notice = sprintf(__(' Warning: There are no active forms. You need to <a href="%s">Create a New Form</a> in order to use the Advanced Custom Fields: Ninjaforms Add-on.',
                 ACF_NF_FIELD_TEXTDOMAIN), admin_url('admin.php?page=gf_new_form'));
 
             $this->createNotice($notice, $inline, $alt);
@@ -53,12 +53,12 @@ class Notices
     }
 
     /**
-     * Check if gravityforms is active. If not, issue a notice
+     * Check if ninjaforms is active. If not, issue a notice
      */
     public function isAdvancedCustomFieldsActive($inline = '', $alt = '')
     {
         if (!function_exists('get_field')) {
-            $notice = sprintf(__('Warning: You need to <a href="%s">Activate Advanced Custom Fields</a> in order to use the Advanced Custom Fields: Gravityforms Add-on.',
+            $notice = sprintf(__('Warning: You need to <a href="%s">Activate Advanced Custom Fields</a> in order to use the Advanced Custom Fields: Ninjaforms Add-on.',
                 ACF_NF_FIELD_TEXTDOMAIN), admin_url('plugins.php'));
 
             $this->createNotice($notice, $inline, $alt);

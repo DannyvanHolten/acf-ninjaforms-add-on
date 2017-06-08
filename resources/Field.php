@@ -44,7 +44,7 @@ class Field extends acf_field
     }
 
     /**
-     * Create extra settings for our gravityforms field. These are visible when editing a field.
+     * Create extra settings for our ninjaforms field. These are visible when editing a field.
      *
      * @param $field
      */
@@ -89,7 +89,7 @@ class Field extends acf_field
     }
 
     /**
-     * Render our Gravity Form field with all the forms as options
+     * Render our Ninja Form field with all the forms as options
      *
      * @param $field
      * @return bool
@@ -217,16 +217,16 @@ class Field extends acf_field
      */
     public function hasValidForms()
     {
-        // Stop if Gravityforms is not active
+        // Stop if Ninjaforms is not active
         if (!class_exists('GFAPI')) {
-            $this->notices->isGravityformsActive(true, true);
+            $this->notices->isNinjaFormsActive(true, true);
 
             return false;
         }
 
         // Check if there are forms and set our choices
         if (!$this->forms) {
-            $this->notices->hasActiveGravityForms(true, true);
+            $this->notices->hasActiveNinjaForms(true, true);
 
             return false;
         }

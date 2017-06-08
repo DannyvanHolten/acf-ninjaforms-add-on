@@ -58,7 +58,7 @@ class FieldForV4 extends acf_field
     }
 
     /**
-     * Create extra settings for our gravityforms field. These are visible when editing a field.
+     * Create extra settings for our ninjaforms field. These are visible when editing a field.
      *
      * @param $field
      */
@@ -133,7 +133,7 @@ class FieldForV4 extends acf_field
     }
 
     /**
-     * Render our Gravity Form field with all the forms as options
+     * Render our Ninja Form field with all the forms as options
      *
      * @param $field
      * @return bool
