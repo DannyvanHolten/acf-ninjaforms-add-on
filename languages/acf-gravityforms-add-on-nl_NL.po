@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: acf-gravityforms-addon\n"
+"POT-Creation-Date: 2017-05-31 17:08+0200\n"
+"PO-Revision-Date: 2017-05-31 17:13+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_x;_n:1,2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: resources\n"
+
+#: resources/Field.php:61 resources/FieldForV4.php:86
+msgid "Form Object"
+msgstr "Formulier Object"
+
+#: resources/Field.php:62 resources/FieldForV4.php:87
+msgid "Form ID"
+msgstr "Formulier ID"
+
+#: resources/Field.php:130
+msgid "- Select a form -"
+msgstr "- Selecteer een formulier"
+
+#: resources/Notices.php:38
+#, php-format
+msgid ""
+"Warning: You need to <a href=\"%s\">Activate Gravityforms</a> in order to "
+"use the Advanced Custom Fields: Gravityforms Add-on."
+msgstr ""
+"Waarschuwing: Het is nodig <a href=\"%s\">Gravityforms te activeren</a> om "
+"Advanced Custom Fields: Gravityforms Add-on te gebruiken."
+
+#: resources/Notices.php:48
+#, php-format
+msgid ""
+" Warning: There are no active forms. You need to <a href=\"%s\">Create a New "
+"Form</a> in order to use the Advanced Custom Fields: Gravityforms Add-on."
+msgstr ""
+"Waarschuwing: Er zijn geen actieve formulieren. Het is nodig <a href=\"%s"
+"\">een nieuw formulier te creëren</a> om Advanced Custom Fields: "
+"Gravityforms Add-on te gebruiken."
+
+#: resources/Notices.php:61
+#, php-format
+msgid ""
+"Warning: You need to <a href=\"%s\">Activate Advanced Custom Fields</a> in "
+"order to use the Advanced Custom Fields: Gravityforms Add-on."
+msgstr ""
+"Waarschuwing: Het is nodig <a href=\"%s\">Advanced Custom Fields te "
+"activeren</a> om Advanced Custom Fields: Gravityforms Add-on te gebruiken."
