@@ -30,13 +30,13 @@ Now we know that we can easily use it to build our fields :)
 #### If you return an ID
 ```
 $form = get_field('my-form');
-do_shortcode('[ninjaform id='.$form.']'); 
+Ninja_Forms()->display($form);
 ```
 
 #### If you return an Object
 ```
 $form = get_field('my-form');
-do_shortcode('[ninjaform id='.$form->get_id().']'); 
+Ninja_Forms()->display($form->get_id());
 ```
 
 #### If you return multiple Form ID's
@@ -44,7 +44,7 @@ do_shortcode('[ninjaform id='.$form->get_id().']');
 $forms = get_field('my-form');
 
 foreach($forms as $form) {
-    do_shortcode('[ninjaform id='.$form.']'); 
+    Ninja_Forms()->display($form);
 }
 ```
 
