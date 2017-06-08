@@ -3,7 +3,7 @@
 Plugin Name: Advanced Custom Fields: Ninjaforms Add-on
 Plugin URI: https://github.com/dannyvanholten/acf-ninjaforms-add-on
 Description: Advanced Custom Field with which we can select Ninjaforms.
-Version: 1.2
+Version: 1.0
 Author: Danny van Holten
 Author URI: http://www.dannyvanholten.com/
 Copyright: Danny van Holten
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 } // Exit if accessed directly
 
 // Define multiple necessary constants
-define('ACF_NF_FIELD_VERSION', '1.2');
+define('ACF_NF_FIELD_VERSION', '1.0');
 define('ACF_NF_FIELD_TEXTDOMAIN', 'acf-ninjaforms-add-on');
 define('ACF_NF_FIELD_LANGUAGES', dirname(plugin_basename(__FILE__)) . '/languages/');
 

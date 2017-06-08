@@ -2,7 +2,7 @@
 
 namespace ACFNinjaformsField;
 
-use GFAPI;
+use Ninja_Forms;
 
 class Notices
 {
@@ -34,7 +34,7 @@ class Notices
      */
     public function isNinjaFormsActive($inline = '', $alt = '')
     {
-        if (!class_exists('GFAPI')) {
+        if (!class_exists('Ninja_Forms')) {
             $notice = sprintf(__('Warning: You need to <a href="%s">Activate Ninjaforms</a> in order to use the Advanced Custom Fields: Ninjaforms Add-on.',
                 ACF_NF_FIELD_TEXTDOMAIN), admin_url('plugins.php'));
 

@@ -30,13 +30,13 @@ Now we know that we can easily use it to build our fields :)
 #### If you return an ID
 ```
 $form = get_field('my-form');
-gravity_form($form, true, true, false, '', true, 1); 
+do_shortcode('[ninjaform id='.$form.']'); 
 ```
 
 #### If you return an Object
 ```
 $form = get_field('my-form');
-gravity_form($form['id'], true, true, false, '', true, 1); 
+do_shortcode('[ninjaform id='.$form->get_id().']'); 
 ```
 
 #### If you return multiple Form ID's
@@ -44,7 +44,7 @@ gravity_form($form['id'], true, true, false, '', true, 1);
 $forms = get_field('my-form');
 
 foreach($forms as $form) {
-    gravity_form($form, true, true, false, '', true, 1); 
+    do_shortcode('[ninjaform id='.$form.']'); 
 }
 ```
 

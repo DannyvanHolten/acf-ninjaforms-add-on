@@ -3,7 +3,7 @@
 namespace ACFNinjaformsField;
 
 use acf_field;
-use GFAPI;
+use Ninja_Forms;
 
 class Field extends acf_field
 {
@@ -24,7 +24,7 @@ class Field extends acf_field
     public function __construct()
     {
         $this->name = 'forms';
-        $this->label = __('Forms', 'gravityforms');
+        $this->label = __('Forms', 'ninja-forms');
         $this->category = __('Relational', 'acf');
         $this->defaults = [
             'return_format' => 'form_object',
@@ -35,8 +35,8 @@ class Field extends acf_field
         // Get our notices up and running
         $this->notices = new Notices();
 
-        if (class_exists('GFAPI')) {
-            $this->forms = GFAPI::get_forms();
+        if (class_exists('Ninja_Forms')) {
+            $this->forms = Ninja_Forms()->form()->get_forms();
         }
 
         // Execute the parent constructor as well
@@ -106,7 +106,7 @@ class Field extends acf_field
         }
 
         foreach ($this->forms as $form) {
-            $choices[$form['id']] = $form['title'];
+            $choices[$form->get_id()] = $form->get_setting('title');
         }
 
         // Override field settings and start rendering
@@ -200,7 +200,7 @@ class Field extends acf_field
         if (!empty($field['return_format']) && $field['return_format'] === 'id') {
             return (int)$value;
         }
-        $form = GFAPI::get_form($value);
+        $form = Ninja_Forms()->form($value)->get();
 
         //Return the form object if it's not an error object. Otherwise return false.
         if (!is_wp_error($form)) {
@@ -218,7 +218,7 @@ class Field extends acf_field
     public function hasValidForms()
     {
         // Stop if Ninjaforms is not active
-        if (!class_exists('GFAPI')) {
+        if (!class_exists('Ninja_Forms')) {
             $this->notices->isNinjaFormsActive(true, true);
 
             return false;

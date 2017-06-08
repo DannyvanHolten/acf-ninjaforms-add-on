@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: acf-gravityforms-addon\n"
+"Project-Id-Version: acf-ninjaforms-addon\n"
 "POT-Creation-Date: 2017-05-31 17:08+0200\n"
-"PO-Revision-Date: 2017-05-31 17:13+0200\n"
+"PO-Revision-Date: 2017-06-08 19:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -31,27 +31,27 @@ msgstr "- Selecteer een formulier"
 #: resources/Notices.php:38
 #, php-format
 msgid ""
-"Warning: You need to <a href=\"%s\">Activate Gravityforms</a> in order to "
-"use the Advanced Custom Fields: Gravityforms Add-on."
+"Warning: You need to <a href=\"%s\">Activate Ninjaforms</a> in order to use "
+"the Advanced Custom Fields: Ninjaforms Add-on."
 msgstr ""
-"Waarschuwing: Het is nodig <a href=\"%s\">Gravityforms te activeren</a> om "
-"Advanced Custom Fields: Gravityforms Add-on te gebruiken."
+"Waarschuwing: Het is nodig <a href=\"%s\">Ninjaforms te activeren</a> om "
+"Advanced Custom Fields: Ninjaforms Add-on te gebruiken."
 
 #: resources/Notices.php:48
 #, php-format
 msgid ""
 " Warning: There are no active forms. You need to <a href=\"%s\">Create a New "
-"Form</a> in order to use the Advanced Custom Fields: Gravityforms Add-on."
+"Form</a> in order to use the Advanced Custom Fields: Ninjaforms Add-on."
 msgstr ""
 "Waarschuwing: Er zijn geen actieve formulieren. Het is nodig <a href=\"%s"
-"\">een nieuw formulier te creëren</a> om Advanced Custom Fields: "
-"Gravityforms Add-on te gebruiken."
+"\">een nieuw formulier te creëren</a> om Advanced Custom Fields: Ninjaforms "
+"Add-on te gebruiken."
 
 #: resources/Notices.php:61
 #, php-format
 msgid ""
 "Warning: You need to <a href=\"%s\">Activate Advanced Custom Fields</a> in "
-"order to use the Advanced Custom Fields: Gravityforms Add-on."
+"order to use the Advanced Custom Fields: Ninjaforms Add-on."
 msgstr ""
 "Waarschuwing: Het is nodig <a href=\"%s\">Advanced Custom Fields te "
-"activeren</a> om Advanced Custom Fields: Gravityforms Add-on te gebruiken."
+"activeren</a> om Advanced Custom Fields: Ninjaforms Add-on te gebruiken."

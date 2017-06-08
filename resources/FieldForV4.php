@@ -3,7 +3,7 @@
 namespace ACFNinjaformsField;
 
 use acf_field;
-use GFAPI;
+use Ninja_Forms;
 
 class FieldForV4 extends acf_field
 {
@@ -38,7 +38,7 @@ class FieldForV4 extends acf_field
     public function __construct()
     {
         $this->name = 'forms';
-        $this->label = __('Forms', 'gravityforms');
+        $this->label = __('Forms', 'ninja-forms');
         $this->category = __('Relational', 'acf'); // Basic, Content, Choice, etc
         $this->defaults = [
             'return_format' => 'form_object',
