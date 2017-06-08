@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
-    'ACFGravityformsField\\' => array($baseDir . '/resources'),
+    'ACFNinjaformsField\\' => array($baseDir . '/resources'),
 );
