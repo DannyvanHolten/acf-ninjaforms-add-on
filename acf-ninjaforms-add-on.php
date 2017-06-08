@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Advanced Custom Fields: Gravityforms Add-on
-Plugin URI: https://github.com/dannyvanholten/acf-gravityforms-add-on
-Description: Advanced Custom Field with which we can select Gravityforms.
+Plugin Name: Advanced Custom Fields: Ninjaforms Add-on
+Plugin URI: https://github.com/dannyvanholten/acf-ninjaforms-add-on
+Description: Advanced Custom Field with which we can select Ninjaforms.
 Version: 1.2
 Author: Danny van Holten
 Author URI: http://www.dannyvanholten.com/
