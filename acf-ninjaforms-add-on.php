@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 } // Exit if accessed directly
 
 // Define multiple necessary constants
-define('ACF_NF_FIELD_VERSION', '1.0');
+define('ACF_NF_FIELD_VERSION', '1.0.1');
 define('ACF_NF_FIELD_TEXTDOMAIN', 'acf-ninjaforms-add-on');
 define('ACF_NF_FIELD_LANGUAGES', dirname(plugin_basename(__FILE__)) . '/languages/');
 
