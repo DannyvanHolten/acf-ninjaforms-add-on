@@ -15,7 +15,7 @@ class Notices
 
     public function __construct()
     {
-        if (class_exists('GFAPI')) {
+        if (class_exists('Ninja_Forms')) {
             $this->forms = Ninja_Forms()->form()->get_forms();
         }
     }
