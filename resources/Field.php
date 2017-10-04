@@ -156,13 +156,30 @@ class Field extends acf_field
      * Return a form object when not empty
      *
      * @param $value
-     * @param $post_id
+     * @param $postId
      * @param $field
      * @return array|bool
      */
     public function format_value($value, $postId, $field)
     {
         return $this->processValue($value, $field);
+    }
+
+    /**
+     *
+     *  This filter is applied to the $value before it is updated in the db
+     *
+     * @param  $value - the value which will be saved in the database
+     *
+     * @return $value - the modified value
+     */
+    public function update_value($value)
+    {
+        // Strip empty array values
+        if (is_array($value)) {
+            $value = array_values(array_filter($value));
+        }
+        return $value;
     }
 
     /**
