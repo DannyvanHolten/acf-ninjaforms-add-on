@@ -43,6 +43,7 @@ class FieldForV4 extends acf_field
         $this->defaults = [
             'return_format' => 'form_object',
             'multiple'      => 0,
+            'default_value' => '',
             'allow_null'    => 0
         ];
 
@@ -87,6 +88,21 @@ class FieldForV4 extends acf_field
                         'id' => __('Form ID', ACF_NF_FIELD_TEXTDOMAIN)
                     ],
                     'layout'  => 'horizontal',
+                ]); ?>
+            </td>
+        </tr>
+
+        <tr class="field_option field_option_<?php echo $this->name; ?>">
+            <td class="label">
+                <label><?php echo __('Default Form', 'acf'); ?></label>
+            </td>
+            <td>
+                <?php
+                do_action('acf/create_field', [
+                    'type'    => 'select',
+                    'name'    => 'fields[' . $key . '][default_value]',
+                    'value'   => $field['default_value'],
+                    'choices' => $this->getFormChoices()
                 ]); ?>
             </td>
         </tr>
@@ -150,9 +166,7 @@ class FieldForV4 extends acf_field
             return false;
         }
 
-        foreach ($this->forms as $form) {
-            $choices[$form['id']] = $form['title'];
-        }
+        $choices = $this->getFormChoices();
 
         // Override field settings and start rendering
         $field['choices'] = $choices;
@@ -191,5 +205,19 @@ class FieldForV4 extends acf_field
     {
         $fieldObject = New Field();
         return $fieldObject->processValue($value, $field);
+    }
+
+    /**
+     * Get the Ninja Form choices - normally used by select field.
+     * 
+     * @return array The key value pairs for the select.
+     */
+    protected function getFormChoices() {
+
+        $choices = [];
+        foreach ($this->forms as $form) {
+            $choices[$form['id']] = $form['title'];
+        }
+        return $choices;
     }
 }

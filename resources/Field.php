@@ -29,6 +29,7 @@ class Field extends acf_field
         $this->defaults = [
             'return_format' => 'form_object',
             'multiple'      => 0,
+            'default_value' => '',
             'allow_null'    => 0
         ];
 
@@ -62,6 +63,15 @@ class Field extends acf_field
                 'id'          => __('Form ID', ACF_NF_FIELD_TEXTDOMAIN)
             ],
         ]);
+
+        // Render a field setting that will provide the option of selecting a default form.
+        acf_render_field_setting( $field, array(
+            'label'         => __('Default Form','acf'),
+            'instructions'  => __('Choose a default form','acf'),
+            'name'          => 'default_value',
+            'type'          => 'select',
+            'choices'       => $this->getFormChoices()
+        ));
 
         // Render a field setting that will tell us if an empty field is allowed or not.
         acf_render_field_setting($field, [
@@ -105,9 +115,7 @@ class Field extends acf_field
             return false;
         }
 
-        foreach ($this->forms as $form) {
-            $choices[$form->get_id()] = $form->get_setting('title');
-        }
+        $choices = $this->getFormChoices();
 
         // Override field settings and start rendering
         $field['choices'] = $choices;
@@ -249,5 +257,19 @@ class Field extends acf_field
         }
 
         return true;
+    }
+
+    /**
+     * Get the Ninja Form choices - normally used by select field.
+     * 
+     * @return array The key value pairs for the select.
+     */
+    protected function getFormChoices() {
+
+        $choices = [];
+        foreach ($this->forms as $form) {
+            $choices[$form->get_id()] = $form->get_setting('title');
+        }
+        return $choices;
     }
 }
